@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class NFL_Eval {
@@ -73,11 +74,8 @@ public class NFL_Eval {
                     Team currTeam = Teams.get(football[1]);
 
                     currTeam.getOff().setRushAndPass(football[6], football[7], football[8], //relevant info
-                            football[9], football[11], football[12],
-                            football[13], football[14], football[16],
-                            football[17], football[18], football[19], football[21], football[22], football[24], football[25], football[26]);
+                            football[9], football[21], football[22], football[24], football[25], football[26]);
                 }
-
             }
         }
         catch (IOException io) {
@@ -234,11 +232,17 @@ public class NFL_Eval {
                     Team currTeam = Teams.get(team);
 
                     currTeam.getOff().initPasser();
+                    if(football.length == 29){
+                    football = Arrays.copyOf(football, football.length + 2);
+                    football[29] = "0";
+                    football[30] = "0";
+                    System.out.println("Should be zero " + football[29]);
+                    }
                     currTeam.getOff().getPass().setPasser(football[1], football[10], football[11], //relevant info
                             football[12], football[13], football[14],
-                            football[15], football[16], football[17],
-                            football[19], football[20], football[21],
-                            football[23], football[27], football[28]);
+                            football[15], football[17], football[18],
+                            football[20], football[21], football[23],
+                            football[24], football[28], football[29], football[30]);
                 }
                 else{
                     System.out.println("COULD NOT FIND TEAM: " + team);

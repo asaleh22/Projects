@@ -279,10 +279,8 @@ public class Team{
             passers = new ArrayList<Passing>();
             this.rush = new Rushing();
         }
-
         public void setRushAndPass(String yardsPerPlay, String takeAways, String fumbleslost, String fstDtotal,
-                                   String passesAttempt,String passingYrds, String passingTD, String passingINT, String fstDbypass,
-                                   String rushingattempt, String rushingyrds, String td_rushing, String fstdwnbyrun,
+                                   String fstdwnbyrun,
                                    String penalties, String fstbyPenalty, String percentofscorebyoffense, String percentageofdrivesendingturnover){
 
 
@@ -335,38 +333,6 @@ public class Team{
 
         public String getFstDtotal() {
             return fstDtotal;
-        }
-
-        public String getPassesAttempt() {
-            return passesAttempt;
-        }
-
-        public String getPassingYrds() {
-            return passingYrds;
-        }
-
-        public String getPassingTD() {
-            return passingTD;
-        }
-
-        public String getPassingINT() {
-            return passingINT;
-        }
-
-        public String getFstDbypass() {
-            return fstDbypass;
-        }
-
-        public String getRushingattempt() {
-            return rushingattempt;
-        }
-
-        public String getRushingyrds() {
-            return rushingyrds;
-        }
-
-        public String getTd_rushing() {
-            return td_rushing;
         }
 
         public String getFstdwnbyrun() {
@@ -442,6 +408,7 @@ public class Team{
             private String yardsPerGame;
             private String qbr;
             private String sacks;
+            private String sk_Percentage;
             private String comeBacks;
             private String GWD;
 
@@ -449,7 +416,7 @@ public class Team{
             public void setPasser(String Name, String comp_Percentage, String yards, String td,
                                   String td_Percentage, String INT, String intPercentage, String Lng,
                                   String yardsPerAttempt, String yardsPerCompletion, String yardsPerGame,
-                                  String qbr, String sacks, String comeBacks, String GWD){
+                                  String qbr, String sacks, String sk_Percentage, String comeBacks, String GWD){
                 this.Name = Name;
                 this.comp_Percentage = comp_Percentage;
                 this.yards = yards;
@@ -463,6 +430,7 @@ public class Team{
                 this.yardsPerGame = yardsPerGame;
                 this.qbr = qbr;
                 this.sacks = sacks;
+                this.sk_Percentage = sk_Percentage;
                 this.comeBacks = comeBacks;
                 this.GWD = GWD;
 
@@ -521,6 +489,10 @@ public class Team{
 
             public String getSacks() {
                 return sacks;
+            }
+
+            public String getSk_Percentage() {
+                return sk_Percentage;
             }
 
             public String getComeBacks() {

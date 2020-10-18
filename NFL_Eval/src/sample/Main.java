@@ -300,8 +300,10 @@ public class Main extends Application {
         return new TextFormatter<>(change -> {
             if (change.isAdded()) {
                 if (change.getText().indexOf('\n') > -1) { //if /n is found
+                    //makes the entire string fit in 40 characters
+                    //connecting the first 35 with the last 5.
                     if(change.getText().length() > 40)
-                        change.setText(change.getText().substring(0,36) + change.getText().substring(change.getText().length()-4, change.getText().length()));
+                        change.setText(change.getText().substring(0,35) + change.getText().substring(change.getText().length()-5, change.getText().length()));
                 }
             }
             return change;
