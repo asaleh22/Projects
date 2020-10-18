@@ -1,0 +1,14 @@
+
+
+.custom{
+    -fx-fill: white;
+    -fx-font-size: 10pt;
+    -fx-text-align: right;
+
+}
+
+.text-field {
+    -fx-alignment: center;
+    -fx-background-color: grey;
+    -fx-text-fill: white;
+}
