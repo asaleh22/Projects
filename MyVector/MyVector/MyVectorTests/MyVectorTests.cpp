@@ -64,6 +64,13 @@ namespace UnitVectorTest
 
 			m.reset();
 			Assert::AreEqual(m.remove(8), false);
+
+			myVector<const char*> c;
+			c.add("hello", "world");
+			c.remove(0);
+			Assert::AreEqual(c.contains("hello"), false);
+			Assert::AreEqual(c[0], "world");
+			Assert::AreEqual(c.getSize(), size_t(1));
 		}
 
 		TEST_METHOD(removeAll) {
@@ -126,11 +133,6 @@ namespace UnitVectorTest
 			Node a;
 			nodes.add(a, a, a, a);
 			Assert::AreEqual(nodes.getSize(), size_t(4));
-
-
-
-
-
 		}
 
 		TEST_METHOD(addElementsOf) {

@@ -11,9 +11,8 @@ void disp(const myVector<T>& obj) {
 int main()
 {
     myVector<int> m;
-    m.add(1, 2, 3, 4);
+    m.add(1, 2, 3, 4,7);
     disp(m);
-
     return 0;
 }
 
