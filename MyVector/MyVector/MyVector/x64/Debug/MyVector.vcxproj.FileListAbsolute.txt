@@ -2,3 +2,5 @@ C:\Users\Ali\Picture\GitHubJavaPartTwo\Projects\MyVector\MyVector\MyVector\x64\D
 C:\Users\Ali\Picture\GitHubJavaPartTwo\Projects\MyVector\MyVector\MyVector\x64\Debug\MyVector.pdb
 C:\Users\Ali\Picture\GitHub_JavaAndCPP\Projects\MyVector\MyVector\MyVector\x64\Debug\MyVector.exe
 C:\Users\Ali\Picture\GitHub_JavaAndCPP\Projects\MyVector\MyVector\MyVector\x64\Debug\MyVector.pdb
+C:\Users\Ali\Pictures\GitHubFinalCheck\Projects\MyVector\MyVector\MyVector\x64\Debug\MyVector.exe
+C:\Users\Ali\Pictures\GitHubFinalCheck\Projects\MyVector\MyVector\MyVector\x64\Debug\MyVector.pdb

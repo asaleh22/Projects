@@ -233,6 +233,7 @@ public:
 		other.resize(sz);
 	}
 
+	//resizes vector with the new size
 	void resize(size_t newSize) {
 
 		if (newSize < 0 || newSize >= m_size)
