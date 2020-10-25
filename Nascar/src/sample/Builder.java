@@ -8,9 +8,8 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class Builder{
-
-    private HashMap<Integer, String> racers;
-    Builder(HashMap<Integer, String> racers){
+    private HashMap<Integer, String[]> racers;
+    Builder(HashMap<Integer, String[]> racers){
         this.racers = racers;
         try{
             build();
@@ -22,7 +21,7 @@ public class Builder{
     // and the previous race finishes as one long string value
     private void build() throws URISyntaxException {
         String line = "";
-        String csvSplit = ",";
+        String csvSplit = ":";
         String[] races;
         URI url = getClass().getResource("/resources/data/Data.txt").toURI();
         File statsFile = new File(url);
@@ -31,7 +30,9 @@ public class Builder{
             {
             while ((line = br.readLine()) != null) {
                 races = line.split(csvSplit);
-                racers.put(Integer.valueOf(races[0]),races[1]);
+                String[] tmpraces;
+                tmpraces = races[1].split(",");
+                racers.put(Integer.valueOf(races[0]),tmpraces);
             }
         }
         catch (IOException io) {

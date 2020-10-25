@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="996094c4-2208-460f-b167-fb28dbe5ba1c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/NFL_Eval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/NFL_Eval.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Nascar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Nascar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Nascar/out/production/JavaFX/resources/data/Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Nascar/out/production/JavaFX/resources/data/Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Nascar/src/resources/data/Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Nascar/src/resources/data/Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Nascar/src/sample/Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Nascar/src/sample/Analysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Nascar/src/sample/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Nascar/src/sample/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Nascar/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Nascar/src/sample/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +23,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3910">
+            <state relative-caret-position="3842">
               <caret line="304" column="54" selection-start-line="304" selection-start-column="54" selection-end-line="304" selection-end-column="54" />
               <folding>
                 <element signature="method#changeLeftImage#0;class#Main#0" />
@@ -27,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Run_Analysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
+            <state relative-caret-position="1309">
               <caret line="79" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="method#passQBs#0;class#Run_Analysis#0" />
@@ -65,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/NFL_Eval.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+            <state relative-caret-position="1071">
+              <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setData#0;class#NFL_Eval#0" />
@@ -121,8 +128,8 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/resources/stats/Passing_Offense.txt" />
         <option value="$PROJECT_DIR$/src/sample/Team.java" />
-        <option value="$PROJECT_DIR$/src/sample/NFL_Eval.java" />
         <option value="$PROJECT_DIR$/src/sample/Run_Analysis.java" />
+        <option value="$PROJECT_DIR$/src/sample/NFL_Eval.java" />
       </list>
     </option>
   </component>
@@ -137,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,7 +187,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -244,8 +251,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11012146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11336032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -254,7 +262,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.12611012" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.12255773" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -332,12 +340,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3910">
+        <state relative-caret-position="3842">
           <caret line="304" column="54" selection-start-line="304" selection-start-column="54" selection-end-line="304" selection-end-column="54" />
           <folding>
             <element signature="method#changeLeftImage#0;class#Main#0" />
             <element signature="method#changeRightImage#0;class#Main#0" />
             <element signature="method#setButtonStyles#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Run_Analysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="method#passQBs#0;class#Run_Analysis#0" />
           </folding>
         </state>
       </provider>
@@ -366,10 +384,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/stats/Passing_Offense.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="97" selection-start-line="27" selection-start-column="97" selection-end-line="27" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/NFL_Eval.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+        <state relative-caret-position="1071">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setData#0;class#NFL_Eval#0" />
@@ -380,23 +405,6 @@
             <element signature="method#setPassingOffense#0;class#NFL_Eval#0" />
             <element signature="method#buildTeams#0;class#NFL_Eval#0" />
             <element signature="method#converter#0;class#NFL_Eval#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/stats/Passing_Offense.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="97" selection-start-line="27" selection-start-column="97" selection-end-line="27" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Run_Analysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="method#passQBs#0;class#Run_Analysis#0" />
           </folding>
         </state>
       </provider>

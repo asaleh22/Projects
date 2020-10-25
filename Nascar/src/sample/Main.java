@@ -20,10 +20,11 @@ import java.util.Map;
 public class Main extends Application {
     TextField[] racers;
     GridPane grid;
-    HashMap<Integer, String> H_Racers;
+    HashMap<Integer, String[]> H_Racers;
     Builder builder;
     Text handler;
     Text texts[];
+    ArrayList<VBox> names;
     TextField err = new TextField();
     Analysis analysis = new Analysis();
     static int errorNumber;
@@ -37,6 +38,7 @@ public class Main extends Application {
 
         racers = new TextField[30];
         texts = new Text[6];
+        names = new ArrayList<>();
         setRacers(0,0,false);    //define racer textfields.
 
         Button submit = new Button("Submit");
@@ -64,7 +66,7 @@ public class Main extends Application {
         H_Racers = new HashMap<>();
         builder = new Builder(H_Racers);
 
-        setText(0);
+        setDataContainer(0);
         setLegend();
 
         myThread m = new myThread(); //Gate keeping mechanism, forcing user to input fiv
@@ -134,7 +136,7 @@ public class Main extends Application {
                     ArrayList<Integer> tmp = new ArrayList<>(arr.subList(size - 5, size));
                     int currIndex = (size/5) - 1;
                     size -= 5;
-                    analysis.setForAnalysis(tmp, H_Racers, texts[currIndex]);
+                    analysis.setForAnalysis(tmp, H_Racers, texts[currIndex], names, currIndex);
 
                     // if user enters a non existing number the static int is changed above
                     boolean found = analysis.ShowStats();
@@ -202,27 +204,56 @@ public class Main extends Application {
         setRacers(++col, index, true);
     }
 
+    /*Recursively creates 6 HBOX Nodes to store 5 labels and 1 text object per HBOX node*/
+    public void setDataContainer(int i){
 
-    /*Recursively creates 6 Text objects to store race information*/
-    public void setText(int i){
-        if(i == 6)
-            return;
+        if(i == 6) return;
+
+        HBox hb = new HBox();
+        Label labels[] = new Label[5];
+        for(int j = 0; j < labels.length; ++j){
+            labels[j] = new Label();
+            labels[j].setStyle("-fx-text-fill: white;");
+        }
+        labels[0].setText("Group " + (i+1) + ": ");
+        VBox labelContainer = new VBox();//contains all 6 labels
+
+        labelContainer.setStyle("-fx-border: 12px solid; -fx-border-color:red;");
+        labelContainer.setPrefHeight(160);
+        labelContainer.setMinHeight(160);
+        labelContainer.setMaxHeight(160);
+
+        labelContainer.setPrefWidth(60);
+        labelContainer.setMinWidth(60);
+        labelContainer.setMaxWidth(60);
+
+        labelContainer.setSpacing(14);
+        labelContainer.getChildren().addAll(labels);
+
+        names.add(labelContainer);
+
         Text t = new Text();
-        t.setText("Group " + (i+1) + ": ");
 
         texts[i] = t;
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(t);
-        scrollPane.setFitToWidth(true);
-        scrollPane.setPrefWidth(180);
-        scrollPane.setPrefHeight(140);
-        scrollPane.setMaxWidth(180);
-        scrollPane.setMaxHeight(140);
-        scrollPane.setMinWidth(180);
-        scrollPane.setMinHeight(140);
-        GridPane.setConstraints(scrollPane,i,9);
-        grid.getChildren().add(scrollPane);
-        setText(++i);
+
+        hb.setPrefWidth(180);
+        hb.setPrefHeight(160);
+        hb.setMaxWidth(180);
+        hb.setMaxHeight(160);
+        hb.setMinWidth(180);
+        hb.setMinHeight(160);
+        hb.setStyle("-fx-background-color: black;");
+
+        scrollPane.setPrefWidth(130);
+        scrollPane.setMinWidth(130);
+        scrollPane.setMaxWidth(130);
+
+        hb.getChildren().addAll(labelContainer,scrollPane);
+        grid.getChildren().add(hb);
+        GridPane.setConstraints(hb, i, 9);
+        setDataContainer(++i);
     }
 
     //A legend linking jersey numbers with the correct racers
@@ -230,11 +261,11 @@ public class Main extends Application {
         String textString = "";
         int col = 0;
         int i = 0;
-        //changed from H_racers.entryset
-        for (Map.Entry<Integer, String> pair: H_Racers.entrySet()) {
+
+        for (Map.Entry<Integer, String[]> pair: H_Racers.entrySet()) {
             int num = pair.getKey();
-            String pos[] = pair.getValue().split(" ");
-            textString += pos[1] + ":" + num + "\n";
+            String pos[] = pair.getValue();
+            textString += pos[0] + ":" + num + "\n";
             ++i;
             if(i == 6){
                 Text text = new Text(textString);

@@ -81,7 +81,6 @@ public class NFL_Eval {
         catch (IOException io) {
             System.out.println(io);
         }
-
     }
 
     //Enters the relevant information for this category.
@@ -236,7 +235,6 @@ public class NFL_Eval {
                     football = Arrays.copyOf(football, football.length + 2);
                     football[29] = "0";
                     football[30] = "0";
-                    System.out.println("Should be zero " + football[29]);
                     }
                     currTeam.getOff().getPass().setPasser(football[1], football[10], football[11], //relevant info
                             football[12], football[13], football[14],
