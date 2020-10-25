@@ -55,7 +55,7 @@ public class Run_Analysis{
         addLine(t, "     Total turnovers:"              + align() + A.getOff().getTurnOvers());
         addLine(t,"     Total Fumbles Lost:"            + align() + A.getOff().getFumbleslost());
         addLine(t,"     Total First Downs: "            + align() + A.getOff().getFstDtotal());
-        addLine(t,"     Penalties Taken:"              + align() + A.getOff().getPenalties());
+        addLine(t,"     Penalties Taken:"               + align() + A.getOff().getPenalties());
         addLine(t,"     Firsts by Penalty:"             + align() + A.getOff().getFstbyPenalty());
         addLine(t,"     Avg Drives ending in a score:"  + align() + A.getOff().getPercentofscorebyoffense());
         addLine(t,"     Drives ending in a Turnover: "  + align() + A.getOff().getPercentageofdrivesendingturnover());
@@ -77,7 +77,7 @@ public class Run_Analysis{
         addLine(area, A.getName() + " Run Offense ");
         addLine(area, "     Rushing TDS Scored: "       + align() + A.getOff().getRush().getTD());
         addLine(area, "     Rush Yrds Per Att: "        + align() + A.getOff().getRush().getYrdsPer_A());
-        addLine(area,"     Rush Yrds Per Gme:  "        + align() + A.getOff().getRush().getYrdsPer_G());
+        addLine(area,"     Rush Yrds Per GM:  "         + align() + A.getOff().getRush().getYrdsPer_G());
         addLine(area,"     Rushing Fst: "               + align() + A.getOff().getFstdwnbyrun());
         addLine(area,"     Rush Yrds Total: "           + align() + A.getOff().getRush().getYrds());
     }
@@ -86,22 +86,22 @@ public class Run_Analysis{
         addLine(area, B.getName() + " Run Defense ");
         addLine(area, "     Rushing TDs given up: "         + align() + B.getDef().getRush().getTd());
         addLine(area, "     Rush Yrds given up per Att: "   + align() + B.getDef().getRush().getYrdsPer_A());
-        addLine(area,"     Rush Yrds given up per Gme: "    + align() + B.getDef().getRush().getYrdsPer_G());
+        addLine(area,"     Rush Yrds given up per GM: "     + align() + B.getDef().getRush().getYrdsPer_G());
         addLine(area,"     Rush Fst given up: "             + align() + B.getDef().getRush().getFst_run());
     }
 
     private void passQBs(Team A, TextArea t){
         for(Team.Offense.Passing p : A.getOff().getPassers()){
             addLine(t, "Name: "                             + p.getName());
-            addLine(t, "     Comp Percentage:"              + align() + p.getComp_Percentage());
+            addLine(t, "     CMP Percentage:"               + align() + p.getComp_Percentage());
             addLine(t, "     Passing Yards:"                + align() + p.getYards());
-            addLine(t, "     Passing yrds per Attempt"      + align() + p.getYardsPerAttempt());
-            addLine(t, "     Passing yrds per Complete"     + align() + p.getYardsPerCompletion());
-            addLine(t, "     Passing yrds per Game"         + align() + p.getYardsPerGame());
+            addLine(t, "     Passing yrds per ATT"          + align() + p.getYardsPerAttempt());
+            addLine(t, "     Passing yrds per CMP"          + align() + p.getYardsPerCompletion());
+            addLine(t, "     Passing yrds per GM"           + align() + p.getYardsPerGame());
             addLine(t,"     Passing TDS:"                   + align() + p.getTd());
-            addLine(t, "     Passing TD-percentage:"        + align() + p.getTd_Percentage());
+            addLine(t, "     Passing TD Percentage:"        + align() + p.getTd_Percentage());
             addLine(t,"     Passing INT: "                  + align() + p.getINT());
-            addLine(t, "     Int percentage: "              + align() + p.getIntPercentage());
+            addLine(t, "     INT Percentage: "              + align() + p.getIntPercentage());
             addLine(t,"     QBR:"                           + align() + p.getQbr());
             addLine(t, "     Sacks:"                        + align() + p.getSacks());
             addLine(t, "     Sack Percentage:"              + align() + p.getSk_Percentage());
@@ -120,14 +120,14 @@ public class Run_Analysis{
         addLine(t, "     Pass-TD percentage:   "    + align() + A.getDef().getPass().getTD_percentage());
         addLine(t, "     INTS caught:        "      + align() + A.getDef().getPass().getInt());
         addLine(t,"     INTS percentage:  "         + align() + A.getDef().getPass().getInt_percentage());
-        addLine(t,"     Yards Per ATT.: "           + align() + A.getDef().getPass().getYrdsPer_A());
-        addLine(t, "     Yards Per CMP.: "          + align() + A.getDef().getPass().getYrdsPer_C());
-        addLine(t,"     Yards Per GMS.: "           + align() + A.getDef().getPass().getYrdsPer_G());
+        addLine(t,"     Yards Per ATT: "            + align() + A.getDef().getPass().getYrdsPer_A());
+        addLine(t, "     Yards Per CMP: "           + align() + A.getDef().getPass().getYrdsPer_C());
+        addLine(t,"     Yards Per GMS: "            + align() + A.getDef().getPass().getYrdsPer_G());
         addLine(t,"     QB rating.:     "           + align() + A.getDef().getPass().getQbRating());
         addLine(t,"     QB HITS.:       "           + align() + A.getDef().getPass().getQBHits());
         addLine(t,"     QB Sacks.:      "           + align() + A.getDef().getPass().getSk());
         addLine(t, "     TKL for Loss.:  "          + align() + A.getDef().getPass().getTFL());
-        addLine(t,"     Yards Gained Per ATT.: "    + align() + A.getDef().getPass().getYardsGainedPerAttempt());
+        addLine(t,"     Yards Gained Per ATT: "     + align() + A.getDef().getPass().getYardsGainedPerAttempt());
         addLine(t,"     Sack Percentage:   "        + align() + A.getDef().getPass().getSackPercentage());
     }
 }
